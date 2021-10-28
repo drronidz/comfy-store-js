@@ -1,0 +1,20 @@
+{
+  "name": "comfy-store",
+  "version": "1.0.0",
+  "description": "Comfy Store JS Project (ES6) (John Smigla)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devserver": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drronidz/comfy-store-js.git"
+  },
+  "author": "drronidz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drronidz/comfy-store-js/issues"
+  },
+  "homepage": "https://github.com/drronidz/comfy-store-js#readme"
+}
