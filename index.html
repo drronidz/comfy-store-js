@@ -42,19 +42,59 @@
         <a href="products.html" class="hero-btn">show now</a>
       </div>
     </section>
-    <!-- side bar -->
+    <!-- side bar [navigation bar] -->
     <div class="sidebar-overlay">
       <aside class="sidebar">
-        <!-- side bar (close button) -->
+        <!-- side bar [navigation bar] (close button) -->
         <button class="sidebar-close">
           <i class="fas fa-times"></i>
         </button>
-        <!-- side bar (sidebar-links) -->
+        <!-- side bar [navigation bar] (sidebar-links) -->
         <ul class="sidebar-links">
           <li><a href="index.html" class="sidebar-link"><i class="fas fa-home fa-fw"></i>home</a></li>
           <li><a href="index.html" class="sidebar-link"><i class="fas fa-couch fa-fw"></i>products</a></li>
           <li><a href="index.html" class="sidebar-link"><i class="fas fa-book fa-fw"></i>about</a></li>
         </ul>
+      </aside>
+    </div>
+    <!-- cart -->
+    <div class="cart-overlay show">
+      <aside class="cart">
+        <!-- close button [cart] -->
+        <button class="cart-close"><i class="fas fa-times"></i></button>
+        <!-- header [cart] -->
+        <header><h3 class="text-slanted">your bag</h3></header>
+        <!-- items [cart] -->
+        <div class="cart-items">
+          <!-- single item [cart] -->
+          <article class="cart-item" data-id="">
+            <!-- single item image [cart] -->
+            <img src="./images/main-bcg.jpeg" alt="name" class="cart-item-img">
+            <!-- single item info [cart] -->
+            <div>
+              <h4 class="cart-item-name">high-back bench</h4>
+              <p class="cart-item-price">$13.99</p>
+              <button class="cart-item-remove-btn">remove</button>
+            </div>
+            <!-- single item amount toggle [cart] -->
+            <div>
+              <button class="cart-item-increase-btn">
+                <i class="fas fa-chevron-up"></i>
+              </button>
+              <p class="cart-item-amount">1</p>
+              <button class="cart-item-decrease-btn">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+          </article>
+          <!-- end of single item [cart] -->
+        </div>
+        <!-- footer [cart] -->
+        <footer>
+          <h3 class="cart-total text-slanted">total : $12.99</h3>
+          <!-- checkout button [cart] -->
+          <button class="cart-checkout btn">checkout</button>
+        </footer>
       </aside>
     </div>
     <script type="module" src="index.js"></script>
