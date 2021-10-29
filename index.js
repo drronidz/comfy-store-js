@@ -13,8 +13,10 @@ const init = async () => {
     console.log(products)
     if(products) {
         // Add products to the store
-        setupStore(products)
         console.log(store)
+        setupStore(products)
+        const featured = store.filter((product) => product.featured === true)
+        console.log(featured)
     }
 }
 
