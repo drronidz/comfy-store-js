@@ -23,6 +23,12 @@ const setupCompanies = (store) => {
                     return product.company === event.target.textContent
                 })
             }
+
+            if (newStore.length < 1) {
+                const productsContainer = getElement('.products-container')
+                productsContainer.innerHTML = `
+                            <h3 class="filter-error"> Sorry, no products matched your search !</h3>`
+            }
             display(newStore, getElement('.products-container'))
         }
     })
