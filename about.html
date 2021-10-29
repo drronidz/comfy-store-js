@@ -15,7 +15,102 @@
   </head>
 
   <body>
-    <h2>about page</h2>
-    <script type="module" src="./src/pages/about.js"></script>
+  <nav class="navbar page">
+    <div class="nav-center">
+      <!-- links -->
+      <button class="toggle-nav">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html">home</a></li>
+        <li><a class="nav-link" href="products.html">products</a></li>
+        <li><a class="nav-link" href="about.html">about</a></li>
+      </ul>
+      <!-- logo -->
+      <img src="./images/logo-black.svg" alt="logo" class="nav-logo">
+      <!-- cart icon -->
+      <div class="toggle-cart">
+        <i class="fas fa-shopping-cart"></i>
+      </div>
+      <span class="cart-item-count">1</span>
+    </div>
+  </nav>
+  <!-- hero -->
+  <section class="page-hero">
+    <div class="section-center">
+      <h3 class="page-hero-title">Home / About</h3>
+    </div>
+  </section>
+  <!-- side bar [navigation bar] -->
+  <div class="sidebar-overlay">
+    <aside class="sidebar">
+      <!-- side bar [navigation bar] (close button) -->
+      <button class="sidebar-close">
+        <i class="fas fa-times"></i>
+      </button>
+      <!-- side bar [navigation bar] (sidebar-links) -->
+      <ul class="sidebar-links">
+        <li><a href="index.html" class="sidebar-link"><i class="fas fa-home fa-fw"></i>home</a></li>
+        <li><a href="index.html" class="sidebar-link"><i class="fas fa-couch fa-fw"></i>products</a></li>
+        <li><a href="index.html" class="sidebar-link"><i class="fas fa-book fa-fw"></i>about</a></li>
+      </ul>
+    </aside>
+  </div>
+  <!-- cart -->
+  <div class="cart-overlay">
+    <aside class="cart">
+      <!-- close button [cart] -->
+      <button class="cart-close"><i class="fas fa-times"></i></button>
+      <!-- header [cart] -->
+      <header><h3 class="text-slanted">your bag</h3></header>
+      <!-- items [cart] -->
+      <div class="cart-items">
+        <!-- single item [cart] -->
+        <article class="cart-item" data-id="">
+          <!-- single item image [cart] -->
+          <img src="./images/main-bcg.jpeg" alt="name" class="cart-item-img">
+          <!-- single item info [cart] -->
+          <div>
+            <h4 class="cart-item-name">high-back bench</h4>
+            <p class="cart-item-price">$13.99</p>
+            <button class="cart-item-remove-btn">remove</button>
+          </div>
+          <!-- single item amount toggle [cart] -->
+          <div>
+            <button class="cart-item-increase-btn">
+              <i class="fas fa-chevron-up"></i>
+            </button>
+            <p class="cart-item-amount">1</p>
+            <button class="cart-item-decrease-btn">
+              <i class="fas fa-chevron-down"></i>
+            </button>
+          </div>
+        </article>
+        <!-- end of single item [cart] -->
+      </div>
+      <!-- footer [cart] -->
+      <footer>
+        <h3 class="cart-total text-slanted">total : $12.99</h3>
+        <!-- checkout button [cart] -->
+        <button class="cart-checkout btn">checkout</button>
+      </footer>
+    </aside>
+  </div>
+  <!-- about -->
+  <section class="section section-center about-page">
+    <div class="title">
+      <h2><span>/</span>our history</h2>
+    </div>
+    <p class="about-text">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Alias aliquam at doloribus dolorum eaque et eveniet laborum nihil placeat possimus quasi ratione,
+      ut voluptate. Alias architecto assumenda est expedita, hic iusto molestias neque nihil,
+      nostrum omnis pariatur possimus quam quos rerum unde ut vero! Atque deserunt distinctio,
+      doloremque dolores maxime numquam quaerat quas quidem recusandae sapiente.
+      Assumenda at blanditiis dolores eius libero maiores modi molestiae odio perspiciatis quam qui
+      ratione reprehenderit saepe sapiente sequi similique, voluptatem. Impedit, sequi, voluptas? Incidunt?
+    </p>
+  </section>
+  <script type="module" src="./src/pages/about.js"></script>
   </body>
 </html>
