@@ -15,6 +15,7 @@ const getElement = (selection) => {
   throw new Error(`Please check "${selection}" selector, no such element exist`)
 }
 
+
 const formatPrice = (price) => {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
