@@ -76,8 +76,26 @@ function increaseAmount(id) {
   return newAmount
 }
 
-function setupCartFunctionality() {
+function removeItem(id) {
+  cart = cart.filter((cartItem) => cartItem.id !== id)
+}
 
+function setupCartFunctionality() {
+  cartItemsDOM.addEventListener('click', function (event) {
+    const element = event.target
+    const parent = event.target.parentElement
+    const id = event.target.dataset.id
+    const parentID = event.target.parentElement.dataset.id
+
+    // Remove Item
+    if (element.classList.contains('cart-item-remove-btn')) {
+      removeItem(id)
+      parent.parentElement.remove()
+    }
+    // increase Item amount
+
+    // decrease Item amount
+  })
 }
 
 const init = () => {
