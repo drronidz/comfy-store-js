@@ -30,9 +30,28 @@ export const addToCart = (id) => {
   else {
     // Update values
   }
-  console.log(item)
+  // Add one to the item count
+  displayCartItemCount()
+  // Display cart totals
+  displayCartTotal()
+  // Set cart in local storage
+  setStorageItem('cart', cart)
+  // More stuff coming up
   openCart()
 };
+
+function displayCartItemCount() {
+  const amount = cart.reduce((total, cartItem) => {
+    return total += cartItem.amount
+  },0)
+}
+
+function displayCartTotal() {
+  let total = cart.reduce((total, cartItem) => {
+    return total += cartItem.price * cartItem.amount
+  }, 0)
+  cartTotalDOM.textContent = `Total : ${formatPrice(total)}`
+}
 
 const init = () => {
   console.log(cart)
