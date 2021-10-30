@@ -11,6 +11,8 @@ const cartTotalDOM = getElement('.cart-total')
 
 let cart = getStorageItem('cart')
 
+
+
 export const addToCart = (id) => {
   let item = cart.find((cartItem) => cartItem.id === id)
   if (!item) {
@@ -24,6 +26,14 @@ export const addToCart = (id) => {
   }
   else {
     // Update values
+    const amount = increaseAmount(id)
+    const items = [...cartItemsDOM.querySelectorAll('.cart-item-amount')]
+    console.log(items)
+    const newAmount = items.find((value) => {
+      console.log(value.dataset.id)
+      return value.dataset.id === id
+    })
+    newAmount.textContent = amount
   }
   // Add one to the item count
   displayCartItemCount()
@@ -52,6 +62,18 @@ function displayCartItemsDOM() {
   cart.forEach((cartItem) => {
     addToCartDOM(cartItem)
   })
+}
+
+function increaseAmount(id) {
+  let newAmount
+  cart = cart.map((cartItem) => {
+    if (cartItem.id === id) {
+      newAmount = cartItem.amount + 1
+      cartItem = {...cartItem, amount: newAmount}
+    }
+    return cartItem;
+  })
+  return newAmount
 }
 
 function setupCartFunctionality() {
