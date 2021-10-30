@@ -1,12 +1,7 @@
 // import
-import {
-  getStorageItem,
-  setStorageItem,
-  formatPrice,
-  getElement,
-} from '../utils.js';
-import { openCart } from './toggleCart.js';
-import { findProduct } from '../store.js';
+import {formatPrice, getElement, getStorageItem, setStorageItem,} from '../utils.js';
+import {openCart} from './toggleCart.js';
+import {findProduct} from '../store.js';
 import addToCartDOM from './addToCartDOM.js';
 
 // set items
@@ -41,9 +36,9 @@ export const addToCart = (id) => {
 };
 
 function displayCartItemCount() {
-  const amount = cart.reduce((total, cartItem) => {
+  cartItemCountDOM.textContent = cart.reduce((total, cartItem) => {
     return total += cartItem.amount
-  },0)
+  }, 0)
 }
 
 function displayCartTotal() {
@@ -53,8 +48,26 @@ function displayCartTotal() {
   cartTotalDOM.textContent = `Total : ${formatPrice(total)}`
 }
 
+function displayCartItemsDOM() {
+  cart.forEach((cartItem) => {
+    addToCartDOM(cartItem)
+  })
+}
+
+function setupCartFunctionality() {
+
+}
+
 const init = () => {
-  console.log(cart)
+  // Display amount of cart items
+  displayCartItemCount()
+  // Display total
+  displayCartTotal()
+  // Add all cart items to the DOM
+  displayCartItemsDOM()
+  // Setup cart functionality
+  setupCartFunctionality()
+
 }
 
 init()
