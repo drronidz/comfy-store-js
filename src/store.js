@@ -1,5 +1,4 @@
-import { getStorageItem, setStorageItem } from './utils.js';
-
+import {getStorageItem, setStorageItem} from './utils.js';
 
 
 let store = getStorageItem('store');
@@ -12,5 +11,7 @@ const setupStore = (products) => {
     setStorageItem('store', store)
 };
 console.log(store)
-const findProduct = () => {};
+const findProduct = (id) => {
+    return store.find((product) => product.id === id)
+};
 export { store, setupStore, findProduct };
